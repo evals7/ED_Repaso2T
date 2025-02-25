@@ -8,7 +8,7 @@ import java.util.List;
  * Permite agregar, eliminar y buscar libros por título y por autor
  *
  * @see Libro
- * @author Luis García
+ * @author Eva Lopez
  * @version 4.3.2025
  */
 public class Biblioteca {
@@ -27,7 +27,8 @@ public class Biblioteca {
     //  Test: NO HAY QUE TESTEAR ESTE METODO
     /** Constructor con parámetros.
      *
-     * @param libros Lista de libros con la que se iniciliza la biblioteca
+     * @param libros Lista de libros con la que se iniciliza
+     *               la biblioteca
      */
     public Biblioteca(List<Libro> libros) {
         this.libros = libros;
@@ -39,8 +40,9 @@ public class Biblioteca {
      * Agrega un libro a la biblioteca
      * @param libro Un libro para agregar
      *
-     * @return {@code true} si el libro se ha agregado correctamente o {@code false} si el libro NO se ha agregado
-     * correctamente
+     * @return {@code true} si el libro se ha agregado
+     * correctamente o {@code false} si el libro NO se
+     * ha agregado correctamente
      */
     public boolean agregarLibro(Libro libro) {
         return libros.add(libro);
