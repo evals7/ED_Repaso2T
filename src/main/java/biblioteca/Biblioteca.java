@@ -71,7 +71,7 @@ public class Biblioteca {
     /**
      *
      * @param titulo
-     * @return
+     * @return libro de la biblioteca por título
      */
     public Libro encuentraLibroPorTitulo(String titulo) {
         for (Libro libro : libros) {
@@ -93,7 +93,7 @@ public class Biblioteca {
      * @deprecated  Este metodo ha quedado obsoleto
      * Se recomienda usar {@link #encuentraLibrosPorAutor(String)} en su lugar
      * @param autor
-     * @return
+     * @return libro localizado según el autor
      */
     @Deprecated
     public Libro encuentaLibroPorAutor(String autor) {
@@ -117,7 +117,7 @@ public class Biblioteca {
      * @since V2.0
      * Sustituye al metodo {@link #encuentraLibroPorTitulo(String)}
      * @param autor
-     * @return
+     * @return lista de libros de un determinado autor
      */
     public List<Libro> encuentraLibrosPorAutor(String autor) {
         List<Libro> listaLibros = null;
