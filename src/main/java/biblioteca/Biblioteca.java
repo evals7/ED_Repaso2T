@@ -3,6 +3,7 @@ package biblioteca;
 import java.util.ArrayList;
 import java.util.List;
 
+//TODO: Documentar la clase
 /**
  * Clase que representa una biblioteca con una colección de libros
  * Permite agregar, eliminar y buscar libros por título y por autor
@@ -27,8 +28,8 @@ public class Biblioteca {
     //  Test: NO HAY QUE TESTEAR ESTE METODO
     /** Constructor con parámetros.
      *
-     * @param libros Lista de libros con la que se iniciliza
-     *               la biblioteca
+     * @param libros Lista de libros con la que se inicializa
+     *               la biblioteca. Lo referenciamos para indicar que hay una clase Libro
      */
     public Biblioteca(List<Libro> libros) {
         this.libros = libros;
@@ -70,7 +71,7 @@ public class Biblioteca {
 
     /**
      *
-     * @param titulo
+     * @param titulo titulo del libro a encontrar
      * @return libro de la biblioteca por título
      */
     public Libro encuentraLibroPorTitulo(String titulo) {
@@ -92,7 +93,7 @@ public class Biblioteca {
     /**
      * @deprecated  Este metodo ha quedado obsoleto
      * Se recomienda usar {@link #encuentraLibrosPorAutor(String)} en su lugar
-     * @param autor
+     * @param autor autor del libro
      * @return libro localizado según el autor
      */
     @Deprecated
@@ -116,7 +117,7 @@ public class Biblioteca {
      * Busca todos los libros de un autor determinado
      * @since V2.0
      * Sustituye al metodo {@link #encuentraLibroPorTitulo(String)}
-     * @param autor
+     * @param autor autor del libro
      * @return lista de libros de un determinado autor
      */
     public List<Libro> encuentraLibrosPorAutor(String autor) {
