@@ -16,12 +16,12 @@ public class Biblioteca {
 
     // TODO: Documentar estos atributos
     /** Lista de libros disponibles en la biblioteca */
-    private final List<Libro> libros;
+    private final List<Libro> lista;
 
     // TODO: Documentar este método
     /** Constructor por defecto de la biblioteca sin libros */
     public Biblioteca() {
-        libros = new ArrayList<>();
+        lista = new ArrayList<>();
     }
 
     // TODO: Documentar este método.
@@ -32,7 +32,7 @@ public class Biblioteca {
      *               la biblioteca. Lo referenciamos para indicar que hay una clase Libro
      */
     public Biblioteca(List<Libro> libros) {
-        this.libros = libros;
+        this.lista = libros;
     }
 
     // TODO: Documentar este metodo
@@ -46,13 +46,13 @@ public class Biblioteca {
      * ha agregado correctamente
      */
     public boolean agregarLibro(Libro libro) {
-        return libros.add(libro);
+        return lista.add(libro);
     }
 
     // TODO: Testear este metodo.
     //  Test: comprobar si se ha eliminado
     public boolean eliminarLibro(Libro libro) {
-        return libros.remove(libro);
+        return lista.remove(libro);
     }
 
     // TODO: Documentar este método
@@ -62,7 +62,7 @@ public class Biblioteca {
      * @return lista de libros de la biblioteca
      */
     public List<Libro> getLibros() {
-        return libros;
+        return lista;
     }
 
     // TODO: Documentar este método.
@@ -75,7 +75,7 @@ public class Biblioteca {
      * @return libro de la biblioteca por título
      */
     public Libro encuentraLibroPorTitulo(String titulo) {
-        for (Libro libro : libros) {
+        for (Libro libro : lista) {
             if (libro.getTitulo().equals(titulo)) {
                 return libro;
             }
@@ -98,7 +98,7 @@ public class Biblioteca {
      */
     @Deprecated
     public Libro encuentaLibroPorAutor(String autor) {
-        for (Libro libro : libros) {
+        for (Libro libro : lista) {
             if (libro.getAutor().equals(autor)) {
                 return libro;
             }
@@ -122,7 +122,7 @@ public class Biblioteca {
      */
     public List<Libro> encuentraLibrosPorAutor(String autor) {
         List<Libro> listaLibros = null;
-        for (Libro libro : libros) {
+        for (Libro libro : lista) {
             if (libro.getAutor().equals(autor)) {
                 if (listaLibros == null) {
                     listaLibros = new ArrayList<>();
